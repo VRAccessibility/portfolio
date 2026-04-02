@@ -232,6 +232,46 @@ section.hero p {
     padding: 2rem;
 }
 
+/* --- About Page Grid --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 3rem; /* 4rem vertical gap between rows, 3rem horizontal gap */
+    align-items: center; /* Vertically centers the text with the image */
+    margin: 4rem 0;
+}
+
+.about-text h2 {
+    color: var(--brand-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1px;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-figure {
+    margin: 0;
+    text-align: center;
+}
+
+.about-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.about-figure figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
 /* Ensure keyboard users see the overlay */
 .portfolio-item:hover .portfolio-overlay,
 .portfolio-item:focus .portfolio-overlay {
