@@ -491,6 +491,88 @@ footer ul {
     margin: 0;
 }
 
+/* --- Takeaways & Centered Sections --- */
+.centered-section {
+    max-width: 800px;
+    margin: 6rem auto 4rem;
+    text-align: center;
+}
+
+.centered-section h2, 
+.centered-section h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.centered-section ul.bullet-list {
+    text-align: left;
+    display: inline-block; /* Keeps the block centered but text left-aligned inside */
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.centered-section ul.bullet-list li {
+    margin-bottom: 0.5rem;
+}
+
+.takeaways-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 3rem 0 6rem;
+    text-align: left;
+}
+
+.takeaway-column h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.takeaway-column ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.takeaway-column li {
+    margin-bottom: 0.75rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 4rem 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Specific styling for the Reflections block */
+.reflections-text {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.reflections-text p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .portfolio-grid {
