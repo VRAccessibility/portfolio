@@ -3,9 +3,9 @@
     --text-main: #333333;
     --text-light: #555555;
     --bg-color: #ffffff;
-    --link-color: #0066cc; /* Swapped to standard accessible blue from your recruitment page */
+    --link-color: #0066cc;
     --focus-color: #2c3e50;
-    --max-width: 900px;
+    --max-width: 1000px; /* Increased from 900px to stretch out the layout */
 }
 
 /* Basic reset */
@@ -18,7 +18,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--text-main);
-    background-color: #f9f9f9;
+    background-color: var(--bg-color); /* Matches the container for a unified look */
     line-height: 1.8;
 }
 
@@ -35,24 +35,26 @@ body {
     border: 0;
 }
 
-/* Skip Link */
+/* Skip Link - Hidden until focused */
 .skip-link {
     position: absolute;
-    top: -40px;
-    left: 0;
+    top: 0;
+    left: -9999px; /* Pushes completely off-screen */
     background: var(--focus-color);
     color: white;
-    padding: 8px 16px;
-    z-index: 100;
-    transition: top 0.2s ease;
+    padding: 10px 20px;
+    z-index: 1000;
     text-decoration: none;
     font-weight: bold;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .skip-link:focus {
-    top: 0;
-    outline: 3px solid #fff;
-    outline-offset: -3px;
+    left: 50%; /* Centers it on screen when focused */
+    transform: translateX(-50%);
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
 }
 
 /* Global Link Styles & Focus States */
@@ -74,8 +76,7 @@ a:focus, button:focus, .portfolio-item:focus {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
-    background-color: var(--bg-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow from your recruitment page */
+    /* Box-shadow and container background removed for a flat layout */
 }
 
 /* --- Navigation --- */
@@ -179,6 +180,16 @@ section.hero p {
     font-size: 0.9rem;
 }
 
+/* --- Published Research Citations --- */
+.citation-item {
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.citation-item p {
+    margin: 0 0 1rem 0;
+}
+
 /* --- Portfolio Grid --- */
 .portfolio-grid {
     display: grid;
@@ -256,16 +267,6 @@ footer ul {
     gap: 1.5rem;
     padding: 0;
     margin: 0;
-}
-
-/* --- Published Research Citations --- */
-.citation-item {
-    margin-bottom: 3rem;
-    line-height: 1.8;
-}
-
-.citation-item p {
-    margin: 0 0 1rem 0;
 }
 
 /* Responsive adjustments */
