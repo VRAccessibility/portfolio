@@ -75,15 +75,6 @@ a:focus, button:focus {
     outline-offset: 3px;
 }
 
-/* Remove underlines for explicit navigational elements */
-nav a, footer a, .social-links a, .research-links a {
-    text-decoration: none;
-}
-
-nav a:hover, footer a:hover, .social-links a:hover, .research-links a:hover {
-    text-decoration: underline;
-}
-
 /* WCAG AAA SC 2.5.5: Inflate touch targets to at least 44x44px */
 nav a, footer a, .social-links a, .research-links a {
     display: inline-block;
@@ -116,7 +107,7 @@ nav ul {
 }
 
 nav a {
-    color: var(--text-light);
+    color: var(--link-color);
 }
 
 nav a[aria-current="page"] {
@@ -129,7 +120,7 @@ nav a[aria-current="page"] {
 /* --- Hero Section --- */
 section.hero {
     text-align: center;
-    margin: 2rem 0 0; /* Shifts the hero up to balance the spacing */
+    margin: 2rem 0 0;
 }
 
 section.hero h1 {
@@ -212,14 +203,14 @@ section.hero p {
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem; /* Breather room between cards */
+    gap: 2rem; 
     margin-bottom: 4rem;
 }
 
 .portfolio-card {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Space between text and video */
+    gap: 1rem; 
 }
 
 .portfolio-card.item-large {
@@ -237,12 +228,12 @@ section.hero p {
 }
 
 .portfolio-meta h3 a {
-    color: var(--brand-color);
-    text-decoration: none;
+    color: var(--link-color);
+    text-decoration: underline;
 }
 
 .portfolio-meta h3 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .portfolio-meta p {
@@ -358,11 +349,10 @@ section.hero p {
     margin-bottom: 4rem;
 }
 
-/* The connecting line behind the steps */
 .process-stepper::before {
     content: '';
     position: absolute;
-    top: 25px; /* Half the height of the circle */
+    top: 25px; 
     left: 0;
     right: 0;
     height: 2px;
@@ -398,7 +388,6 @@ section.hero p {
     color: var(--text-light);
 }
 
-/* Reusing the zigzag layout logic */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -449,25 +438,32 @@ section.hero p {
 
 /* Styling for halved, centered images */
 .halved-centered-image {
-    width: 50%; /* Make the container half as big */
-    margin: 4rem auto; /* Centers the figure, matches vertical margins */
-    text-align: center; /* Ensures the caption centers */
+    width: 50%; 
+    margin: 4rem auto; 
+    text-align: center; 
 }
 
 .halved-centered-image img,
 .halved-centered-image video {
-    width: 100%; /* Image fills 100% of the *figure* (which is now 50%) */
+    width: 100%; 
     height: auto;
     display: block;
-    border-radius: 4px; /* Optional: matches other project images */
+    border-radius: 4px; 
+}
+
+@media (max-width: 768px) {
+    .halved-centered-image {
+        width: 100%;
+        margin: 2rem 0;
+    }
 }
 
 /* --- About Page Grid --- */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem 3rem; /* 4rem vertical gap between rows, 3rem horizontal gap */
-    align-items: center; /* Vertically centers the text with the image */
+    gap: 4rem 3rem;
+    align-items: center; 
     margin: 4rem 0;
 }
 
@@ -509,7 +505,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem; /* Doubled from 0.8rem */
+    font-size: 1rem; 
     color: var(--text-light);
 }
 
@@ -538,7 +534,7 @@ footer ul {
 
 .centered-section ul.bullet-list {
     text-align: left;
-    display: inline-block; /* Keeps the block centered but text left-aligned inside */
+    display: inline-block;
     font-size: 1.1rem;
     color: var(--text-light);
     line-height: 1.8;
@@ -592,7 +588,6 @@ footer ul {
     border: 0;
 }
 
-/* Specific styling for the Reflections block */
 .reflections-text {
     max-width: 900px;
     margin: 0 auto 4rem;
@@ -638,7 +633,7 @@ footer ul {
         gap: 2rem;
     }
     .process-stepper::before {
-        display: none; /* Hide the connecting line on mobile */
+        display: none; 
     }
     footer {
         flex-direction: column;
