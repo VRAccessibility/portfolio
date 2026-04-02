@@ -84,7 +84,7 @@ nav {
     display: flex;
     justify-content: center;
     padding: 2rem 0;
-    font-size: 1.8rem; /* Doubled from 0.9rem */
+    font-size: 1.2rem;
 }
 
 nav ul {
@@ -479,7 +479,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.6rem; /* Doubled from 0.8rem */
+    font-size: 1rem; /* Doubled from 0.8rem */
     color: var(--text-light);
 }
 
