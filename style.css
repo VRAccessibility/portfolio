@@ -160,8 +160,9 @@ section.hero p {
 
 /* --- Objective & General Text --- */
 .objective-text {
-    text-align: justify;
-    margin-bottom: 2rem;
+    text-align: left; /* Changed from justify for WCAG AAA */
+    max-width: 80ch; /* WCAG AAA: Limits line length to 80 characters */
+    margin: 0 auto 2rem; /* Keeps the block centered on the screen */
 }
 
 .social-links {
@@ -488,7 +489,8 @@ section.hero p {
 
 .about-text p {
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: left; /* Changed from justify for WCAG AAA */
+    max-width: 80ch; /* Enforces line length */
 }
 
 .about-figure {
@@ -530,7 +532,8 @@ footer ul {
 
 /* --- Takeaways & Centered Sections --- */
 .centered-section {
-    max-width: 800px;
+    /* Changed from 800px to 80ch for precise WCAG AAA character compliance */
+    max-width: 80ch; 
     margin: 6rem auto 4rem;
     text-align: center;
 }
@@ -600,13 +603,14 @@ footer ul {
 }
 
 .reflections-text {
-    max-width: 900px;
+    /* Changed from 900px to 80ch for precise WCAG AAA character compliance */
+    max-width: 80ch; 
     margin: 0 auto 4rem;
 }
 
 .reflections-text p {
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: left; /* Changed from justify for WCAG AAA */
 }
 
 /* Responsive adjustments */
