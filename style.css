@@ -596,6 +596,10 @@ footer ul {
         gap: 2rem;
     }
 
+    .takeaways-grid {
+        grid-template-columns: 1fr;
+    }
+
     .project-hero h1 {
         font-size: 2.5rem;
     }
