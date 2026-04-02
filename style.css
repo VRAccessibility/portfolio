@@ -7,7 +7,7 @@
     /* Updated for WCAG AAA (7:1 for normal text against white) */
     --link-color: #0050a1; 
     --focus-color: #2c3e50;
-    --max-width: 1000px; /* Increased from 900px to stretch out the layout */
+    --max-width: 1000px;
 }
 
 /* Basic reset */
@@ -20,7 +20,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--text-main);
-    background-color: var(--bg-color); /* Matches the container for a unified look */
+    background-color: var(--bg-color);
     line-height: 1.8;
 }
 
@@ -37,11 +37,10 @@ body {
     border: 0;
 }
 
-/* Skip Link - Hidden until focused */
 .skip-link {
     position: absolute;
     top: 0;
-    left: -9999px; /* Pushes completely off-screen */
+    left: -9999px;
     background: var(--focus-color);
     color: white;
     padding: 10px 20px;
@@ -53,7 +52,7 @@ body {
 }
 
 .skip-link:focus {
-    left: 50%; /* Centers it on screen when focused */
+    left: 50%;
     transform: translateX(-50%);
     outline: 3px solid var(--focus-color);
     outline-offset: 2px;
@@ -71,13 +70,13 @@ a:hover, a:focus {
     text-decoration: none; /* Invert decoration on hover for feedback */
 }
 
-a:focus, button:focus, .portfolio-item:focus {
+a:focus, button:focus {
     outline: 3px solid var(--focus-color);
     outline-offset: 3px;
 }
 
 /* Remove underlines for explicit navigational elements */
-nav a, footer a, .social-links a, .research-links a, .portfolio-item {
+nav a, footer a, .social-links a, .research-links a {
     text-decoration: none;
 }
 
@@ -96,7 +95,6 @@ nav a, footer a, .social-links a, .research-links a {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
-    /* Box-shadow and container background removed for a flat layout */
 }
 
 /* --- Navigation --- */
@@ -210,33 +208,58 @@ section.hero p {
     margin: 0 0 1rem 0;
 }
 
-/* --- Portfolio Grid --- */
+/* --- Portfolio Grid & Stacked Cards --- */
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 2rem; /* Breather room between cards */
     margin-bottom: 4rem;
 }
 
-.portfolio-grid .item-large {
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between text and video */
+}
+
+.portfolio-card.item-large {
     grid-column: 1 / -1;
 }
 
-.portfolio-item {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    background-color: #f4f4f4;
-    aspect-ratio: 16 / 9;
-    border-radius: 4px;
+.portfolio-meta {
+    text-align: left;
 }
 
-/* Updated to support Video tags as well as Images */
-.portfolio-item img,
-.portfolio-item video {
+.portfolio-meta h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.portfolio-meta h3 a {
+    color: var(--brand-color);
+    text-decoration: none;
+}
+
+.portfolio-meta h3 a:hover {
+    text-decoration: underline;
+}
+
+.portfolio-meta p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Force perfect 16:9 so videos snap cleanly to grid lines */
+.portfolio-card video,
+.portfolio-card img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     display: block;
 }
 
@@ -439,58 +462,6 @@ section.hero p {
     border-radius: 4px; /* Optional: matches other project images */
 }
 
-/* Ensure it takes full width on small screens */
-@media (max-width: 768px) {
-    .halved-centered-image {
-        width: 100%;
-        margin: 2rem 0;
-    }
-}
-
-/* --- New Stacked Portfolio Cards --- */
-.portfolio-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Creates space between the text and the video */
-}
-
-.portfolio-card.item-large {
-    grid-column: 1 / -1;
-}
-
-.portfolio-meta {
-    text-align: left;
-}
-
-.portfolio-meta h3 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    line-height: 1.2;
-}
-
-.portfolio-meta h3 a {
-    color: var(--brand-color);
-    text-decoration: none;
-}
-
-.portfolio-meta h3 a:hover {
-    text-decoration: underline;
-}
-
-.portfolio-meta p {
-    color: var(--text-light);
-    margin: 0;
-    font-size: 1rem;
-}
-
-.portfolio-card video {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Adds a subtle depth to the videos */
-    display: block;
-}
-
 /* --- About Page Grid --- */
 .about-grid {
     display: grid;
@@ -529,24 +500,6 @@ section.hero p {
     margin-top: 1rem;
     font-size: 0.9rem;
     color: var(--text-light);
-}
-
-/* Ensure keyboard users see the overlay */
-.portfolio-item:hover .portfolio-overlay,
-.portfolio-item:focus .portfolio-overlay {
-    opacity: 1;
-}
-
-.portfolio-overlay h3 {
-    color: var(--brand-color);
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-}
-
-.portfolio-overlay p {
-    color: white;
-    font-size: 0.9rem;
-    margin: 0;
 }
 
 /* --- Footer --- */
@@ -672,21 +625,18 @@ footer ul {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
+    .halved-centered-image {
+        width: 100%;
+        margin: 2rem 0;
+    }
     .takeaways-grid {
         grid-template-columns: 1fr;
     }
-
-    .project-hero h1 {
-        font-size: 2.5rem;
-    }
-
     .process-stepper {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
-    
     .process-stepper::before {
         display: none; /* Hide the connecting line on mobile */
     }
