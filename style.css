@@ -258,7 +258,7 @@ section.hero p {
 /* Text container above the image */
 .project-header-text {
     text-align: center;
-    padding: 6rem 20px 3rem; /* Give it top padding to separate from nav and bottom padding */
+    padding: 1rem 20px 3rem; /* Reduced top padding to perfectly balance the spacing */
 }
 
 .project-header-text h1 {
