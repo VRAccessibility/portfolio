@@ -400,6 +400,28 @@ section.hero p {
     display: block;
 }
 
+/* Styling for halved, centered images */
+.halved-centered-image {
+    width: 50%; /* Make the container half as big */
+    margin: 4rem auto; /* Centers the figure, matches vertical margins */
+    text-align: center; /* Ensures the caption centers */
+}
+
+.halved-centered-image img {
+    width: 100%; /* Image fills 100% of the *figure* (which is now 50%) */
+    height: auto;
+    display: block;
+    border-radius: 4px; /* Optional: matches other project images */
+}
+
+/* Ensure it takes full width on small screens */
+@media (max-width: 768px) {
+    .halved-centered-image {
+        width: 100%;
+        margin: 2rem 0;
+    }
+}
+
 .portfolio-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
