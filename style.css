@@ -258,6 +258,16 @@ footer ul {
     margin: 0;
 }
 
+/* --- Published Research Citations --- */
+.citation-item {
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.citation-item p {
+    margin: 0 0 1rem 0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .portfolio-grid {
