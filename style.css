@@ -506,6 +506,27 @@ footer ul {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    .overview-grid,
+    .meta-stats,
+    .meta-summary,
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .process-stepper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .process-stepper::before {
+        display: none; /* Hide the connecting line on mobile */
+    }
     footer {
         flex-direction: column;
         align-items: center;
