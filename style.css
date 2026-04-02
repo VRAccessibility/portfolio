@@ -255,17 +255,13 @@ section.hero p {
 }
 
 /* --- Portfolio Project Pages --- */
-.project-hero {
-    background-color: #333;
-    background-size: cover;
-    background-position: center;
-    color: white;
+/* Text container above the image */
+.project-header-text {
     text-align: center;
-    padding: 8rem 20px;
-    margin-bottom: 4rem;
+    padding: 6rem 20px 3rem; /* Give it top padding to separate from nav and bottom padding */
 }
 
-.project-hero h1 {
+.project-header-text h1 {
     color: var(--brand-color);
     font-size: 4rem;
     font-weight: 900;
@@ -273,10 +269,25 @@ section.hero p {
     line-height: 1.1;
 }
 
-.project-hero p {
+.project-header-text p {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    color: var(--text-main); /* Match main body text color for AAA contrast on white */
+}
+
+/* Image container */
+.project-hero-image {
+    background-color: #333; /* Fallback for very dark images */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* We must give it a height now that it has no content */
+    height: 400px; 
+    margin-bottom: 4rem;
+    /* Optional: Aspect ratio is more responsive but can get very tall on wide screens */
+    /* aspect-ratio: 16 / 9; */
+    /* max-height: 600px; */
 }
 
 .overview-grid {
