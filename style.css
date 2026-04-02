@@ -320,6 +320,10 @@ footer ul {
     .section-divider {
         font-size: 1.4rem;
     }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
     footer {
         flex-direction: column;
         align-items: center;
