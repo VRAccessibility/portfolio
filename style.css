@@ -82,6 +82,17 @@ nav a, footer a, .social-links a, .research-links a {
     margin: -0.65rem; /* Prevents the padding from ruining visual layout */
 }
 
+/* --- Social Links (Research Page Override) --- */
+.research-page .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+}
+
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
