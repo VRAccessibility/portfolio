@@ -716,3 +716,16 @@ footer ul {
         gap: 1rem;
     }
 }
+
+/* --- Modification: Making the paper figure half size --- */
+.paper-figure {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Modification: Indentation for All Lists --- */
+ul, ol {
+    padding-left: 2.8em; /* Shift all bullet and number lists further right than text edge */
+    margin-bottom: 1.5rem; /* Add vertical spacing back after global reset */
+}
