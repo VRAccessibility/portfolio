@@ -35,6 +35,13 @@
 
         <section class="project-hero-image" style="background-color: #555;">
         </section>
+
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <button id="summary-toggle" aria-expanded="false" aria-controls="objective-summary" class="toggle-btn">Read Plain English Summary</button>
+            <div id="objective-summary" hidden class="plain-english-box" style="text-align: left;">
+                <p>Virtual reality (<abbr title="Virtual Reality">VR</abbr>) usually relies on what you can see, which leaves out people who are blind or visually impaired. In this study, I tested whether 32 blind and visually impaired people could use a vibrating vest to find and select invisible targets in <abbr title="Virtual Reality">VR</abbr>, relying entirely on their sense of touch. I found that while vibrations are great for guiding quick movements, it gets harder for users to be perfectly accurate when targets are close together. The participants enjoyed the experience, but the results show we need better instructions and designs to make touch-based <abbr title="Virtual Reality">VR</abbr> fully accessible.</p>
+            </div>
+        </div>
             
             <section class="overview-grid" aria-labelledby="overview-heading">
                 <h2 id="overview-heading">Project Overview</h2>
@@ -236,5 +243,41 @@
             <p><a href="https://www.linkedin.com/in/craig-anderton-research" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></p>
         </footer>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Plain English Summary Toggle
+        const toggleBtn = document.getElementById('summary-toggle');
+        const summaryBox = document.getElementById('objective-summary');
+
+        if(toggleBtn && summaryBox) {
+            toggleBtn.addEventListener('click', () => {
+                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', !isExpanded);
+                summaryBox.hidden = isExpanded;
+                toggleBtn.textContent = isExpanded ? 'Read Plain English Summary' : 'Hide Plain English Summary';
+            });
+        }
+
+        // Respect reduced motion preference for videos
+        const videos = document.querySelectorAll('.portfolio-card video, .project-figure video');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        const handleVideoPlayback = () => {
+            videos.forEach(video => {
+                if (!prefersReducedMotion.matches) {
+                    // Play if the user has no preference against motion
+                    video.play().catch(e => console.log("Autoplay prevented by browser:", e));
+                } else {
+                    // Pause if the user prefers reduced motion
+                    video.pause();
+                }
+            });
+        };
+
+        handleVideoPlayback();
+        prefersReducedMotion.addEventListener('change', handleVideoPlayback);
+    });
+</script>
 </body>
 </html>
