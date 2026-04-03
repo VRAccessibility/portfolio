@@ -34,6 +34,13 @@
 
         <section class="project-hero-image" style="background-image: url('images/Screenshot 2026-04-02 172937.jpg');">
         </section>
+
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <button id="summary-toggle" aria-expanded="false" aria-controls="objective-summary" class="toggle-btn">Read Plain English Summary</button>
+            <div id="objective-summary" hidden class="plain-english-box" style="text-align: left;">
+                <p>Moving around in virtual reality (<abbr title="Virtual Reality">VR</abbr>), known as locomotion, can be difficult, especially for people with disabilities or those prone to motion sickness. Researchers often study these movement methods, but they usually only look at other academic studies. To see what is actually happening in the real world, I looked at the most popular <abbr title="Virtual Reality">VR</abbr> games and applications to see how developers are actually letting users move. I found that developers are using some methods way less than researchers thought, and are increasingly relying on movement styles that require very precise arm movements. Highlighting these real-world trends shows researchers where they need to focus next to ensure everyone can move around in <abbr title="Virtual Reality">VR</abbr> comfortably.</p>
+            </div>
+        </div>
             
             <section class="overview-grid" aria-labelledby="overview-heading">
                 <h2 id="overview-heading">Project Overview</h2>
@@ -130,7 +137,7 @@
                 </div>
                 <figure class="project-figure">
                     <img src="images/573MBRF5YuXdyeyg.webp" alt="Screenshot of Blade & Sorcery options menu showing inputs for locomotion direction and controllers">
-                    <figcaption>Options menu in Blade & Sorcery</abbr></figcaption>
+                    <figcaption>Options menu in Blade & Sorcery</figcaption>
                 </figure>
             </div>
 
@@ -167,6 +174,10 @@
                 <figure class="project-figure">
                     <img src="images/hs3OHohzg3h0dRwl.webp" alt="Table detailing results of the Locomotion Vault taxonomy, showing Room-Scale Vehicle and Teleportation percentages">
                     <figcaption>Five clusters of locomotion techniques</figcaption>                    
+                    <details class="video-transcript">
+                        <summary>View Locomotion Data Table</summary>
+                        <p>[Insert the full HTML table or structured text version of the Locomotion Vault taxonomy percentages.]</p>
+                    </details>
                 </figure>
             </div>
 
@@ -174,6 +185,10 @@
                 <figure class="project-figure">
                     <img src="images/y73DTkyUopO1CKoI.webp" alt="Line graph charting temporal analysis of Locomotion Vault categories over time showing a decline in teleportation">
                     <figcaption>Temporal analysis of Locomotion Vault categories</figcaption>
+                    <details class="video-transcript">
+                        <summary>Read Temporal Analysis Chart Data</summary>
+                        <p>[Provide the underlying data trends over time for the Locomotion Vault categories shown in the line graph.]</p>
+                    </details>
                 </figure>
                 <div class="project-text">
                     <p>Claims that teleportation is the standard locomotion technique in <abbr title="Virtual Reality">VR</abbr>, whilst largely accurate in 2016 and 2017, <strong>no longer hold true</strong>, with the category as a whole <strong>continuously decreasing in use.</strong></p>
@@ -189,6 +204,10 @@
                 <figure class="project-figure">
                     <img src="images/qBOTxU7GHuU20hVW.webp" alt="Horizontal bar chart detailing Locomotion Vault category overall exploration, with Roomscale as the highest">
                     <figcaption>Locomotion Vault category overall exploration</figcaption>
+                    <details class="video-transcript">
+                        <summary>Read Overall Exploration Chart Data</summary>
+                        <p>[Provide the exact percentages/counts for the Locomotion Vault categories represented in the bar chart.]</p>
+                    </details>
                 </figure>
             </div>
 
@@ -201,6 +220,10 @@
                 <figure class="project-figure">
                     <img src="images/xZJNuiqUTiT81zEi.webp" alt="Pie chart showing total number of individual techniques based on metaphor-based locomotion categorisation">
                     <figcaption>Metaphor-based category exploration</figcaption>
+                    <details class="video-transcript">
+                        <summary>Read Pie Chart Data</summary>
+                        <p>[Insert the values for the metaphor-based locomotion categorisation shown in the pie chart.]</p>
+                    </details>
                 </figure>
                 <div class="project-text">
                     <h3>Conclusion</h3>
@@ -219,6 +242,10 @@
                 <figure class="project-figure">
                     <img src="images/h5XZ6kLOCX8wYHA7.webp" alt="Table showing the number of techniques in an average application by year">
                     <figcaption>Number of techniques in an average application by year</figcaption>
+                    <details class="video-transcript">
+                        <summary>View Techniques by Year Data</summary>
+                        <p>[Insert the data mapping the average number of techniques per application against the year of release.]</p>
+                    </details>
                 </figure>
             </div>
 
@@ -235,6 +262,10 @@
             <figure class="halved-centered-image" style="margin-bottom: 6rem;">
                 <img src="images/eNTwBcSDm3qy2jTJ (1).webp" alt="Poster design for the VR handheld controller haptic feedback demo presented at UX Day 2023">
                 <figcaption>Poster with demo instructions</figcaption>
+                <details class="video-transcript">
+                    <summary>Read Poster Text</summary>
+                    <p>[Insert the full text and descriptions of the imagery contained within the poster design.]</p>
+                </details>
             </figure>
 
             <div class="centered-section">
@@ -295,6 +326,19 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Plain English Summary Toggle
+        const toggleBtn = document.getElementById('summary-toggle');
+        const summaryBox = document.getElementById('objective-summary');
+
+        if(toggleBtn && summaryBox) {
+            toggleBtn.addEventListener('click', () => {
+                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', !isExpanded);
+                summaryBox.hidden = isExpanded;
+                toggleBtn.textContent = isExpanded ? 'Read Plain English Summary' : 'Hide Plain English Summary';
+            });
+        }
+
         // Respect reduced motion preference for videos
         const videos = document.querySelectorAll('.portfolio-card video, .project-figure video');
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
