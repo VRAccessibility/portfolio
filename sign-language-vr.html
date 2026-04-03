@@ -34,6 +34,13 @@
 
         <section class="project-hero-image" style="background-image: url('images/Ff_tx85XwAAysYU.jpeg');">
         </section>
+
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <button id="summary-toggle" aria-expanded="false" aria-controls="objective-summary" class="toggle-btn">Read Plain English Summary</button>
+            <div id="objective-summary" hidden class="plain-english-box" style="text-align: left;">
+                <p>For many Deaf individuals, sign language is their first language, meaning standard text captions in videos can be hard to read. This project looked at how to put a sign language interpreter into a 360-degree virtual reality (<abbr title="Virtual Reality">VR</abbr>) video. I tested two ways to show the interpreter (fixed in the world vs. attached to the screen) and two ways to show the user where to look (arrows vs. a radar). I found that both ways of showing the interpreter work well depending on the goal of the video, but using arrows to guide people is much easier to understand than using a radar.</p>
+            </div>
+        </div>
             
             <section class="overview-grid" aria-labelledby="overview-heading">
                 <h2 id="overview-heading">Project Overview & Accolades</h2>
@@ -229,6 +236,10 @@
             <figure class="full-width-image" style="max-width: 80ch; margin: 4rem auto;">
                 <img src="images/hlnvGqdcDqEcM5Wb.webp" alt="Radar chart comparing usability scores of Arrows vs Radar. Arrows score consistently higher on all positive metrics.">
                 <figcaption style="text-align: center;">Guiding usability radar chart - arrow scores well on each question whilst radar scores poorly</figcaption>
+                <details class="video-transcript">
+                    <summary>View Chart Data</summary>
+                    <p>[Insert the underlying quantitative values used to generate this radar chart.]</p>
+                </details>
             </figure>
 
             <div style="max-width: 80ch; margin: 4rem auto;">
@@ -352,6 +363,19 @@
  
  <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Plain English Summary Toggle
+        const toggleBtn = document.getElementById('summary-toggle');
+        const summaryBox = document.getElementById('objective-summary');
+
+        if(toggleBtn && summaryBox) {
+            toggleBtn.addEventListener('click', () => {
+                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', !isExpanded);
+                summaryBox.hidden = isExpanded;
+                toggleBtn.textContent = isExpanded ? 'Read Plain English Summary' : 'Hide Plain English Summary';
+            });
+        }
+
         // Respect reduced motion preference for videos
         const videos = document.querySelectorAll('.portfolio-card video, .project-figure video');
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
