@@ -78,8 +78,8 @@ a:focus, button:focus {
 /* WCAG AAA SC 2.5.5: Inflate touch targets to at least 44x44px */
 nav a, footer a, .social-links a, .research-links a {
     display: inline-block;
-    padding: 0.5rem; 
-    margin: -0.5rem; /* Prevents the padding from ruining your visual layout */
+    padding: 0.65rem; 
+    margin: -0.65rem; /* Prevents the padding from ruining visual layout */
 }
 
 .container {
@@ -163,6 +163,37 @@ section.hero p {
     text-align: left; /* Changed from justify for WCAG AAA */
     max-width: 80ch; /* WCAG AAA: Limits line length to 80 characters */
     margin: 0 auto 2rem; /* Keeps the block centered on the screen */
+}
+
+/* --- Plain English Summary Toggle --- */
+.toggle-btn {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    background-color: var(--bg-color);
+    color: var(--link-color);
+    border: 2px solid var(--link-color);
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover, .toggle-btn:focus {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+.plain-english-box {
+    background-color: #f9f9f9;
+    border-left: 5px solid var(--brand-color);
+    padding: 1.5rem;
+    margin: 0 auto 2rem auto;
+    max-width: 80ch;
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .social-links {
@@ -255,11 +286,40 @@ section.hero p {
     display: block;
 }
 
+/* --- Video Transcripts (Details/Summary) --- */
+.video-transcript {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.video-transcript summary {
+    cursor: pointer;
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-bottom: 0.5rem;
+    /* Expand touch target natively for AAA */
+    padding: 0.5rem 0; 
+}
+
+.video-transcript summary:hover {
+    text-decoration: none;
+}
+
+.video-transcript p {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
 /* --- Portfolio Project Pages --- */
-/* Text container above the image */
 .project-header-text {
     text-align: center;
-    padding: 1rem 20px 3rem; /* Reduced top padding to perfectly balance the spacing */
+    padding: 1rem 20px 3rem; 
 }
 
 .project-header-text h1 {
@@ -274,21 +334,16 @@ section.hero p {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
-    color: var(--text-main); /* Match main body text color for AAA contrast on white */
+    color: var(--text-main); 
 }
 
-/* Image container */
 .project-hero-image {
-    background-color: #333; /* Fallback for very dark images */
+    background-color: #333; 
     background-size: cover;
     background-position: center;
     width: 100%;
-    /* We must give it a height now that it has no content */
     height: 400px; 
     margin-bottom: 4rem;
-    /* Optional: Aspect ratio is more responsive but can get very tall on wide screens */
-    /* aspect-ratio: 16 / 9; */
-    /* max-height: 600px; */
 }
 
 .overview-grid {
@@ -305,7 +360,6 @@ section.hero p {
     margin: 0;
 }
 
-/* Meta Data (Year, Institution, Type) */
 .meta-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -327,7 +381,6 @@ section.hero p {
     margin: 0.5rem 0 0 0;
 }
 
-/* Problem & Key Finding */
 .meta-summary {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -341,7 +394,6 @@ section.hero p {
     margin: 0 0 1rem 0;
 }
 
-/* Process Stepper */
 .process-section {
     margin-top: 6rem;
 }
@@ -448,7 +500,6 @@ section.hero p {
     display: block;
 }
 
-/* Styling for halved, centered images */
 .halved-centered-image {
     width: 50%; 
     margin: 4rem auto; 
@@ -489,8 +540,8 @@ section.hero p {
 
 .about-text p {
     margin-bottom: 1.5rem;
-    text-align: left; /* Changed from justify for WCAG AAA */
-    max-width: 80ch; /* Enforces line length */
+    text-align: left; 
+    max-width: 80ch; 
 }
 
 .about-figure {
@@ -532,7 +583,6 @@ footer ul {
 
 /* --- Takeaways & Centered Sections --- */
 .centered-section {
-    /* Changed from 800px to 80ch for precise WCAG AAA character compliance */
     max-width: 80ch; 
     margin: 6rem auto 4rem;
     text-align: center;
@@ -585,7 +635,7 @@ footer ul {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     margin: 4rem 0;
@@ -603,14 +653,13 @@ footer ul {
 }
 
 .reflections-text {
-    /* Changed from 900px to 80ch for precise WCAG AAA character compliance */
     max-width: 80ch; 
     margin: 0 auto 4rem;
 }
 
 .reflections-text p {
     margin-bottom: 1.5rem;
-    text-align: left; /* Changed from justify for WCAG AAA */
+    text-align: left; 
 }
 
 /* Responsive adjustments */
