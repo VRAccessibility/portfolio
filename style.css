@@ -141,18 +141,24 @@ section.hero p {
 .section-divider {
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     color: var(--brand-color);
     font-weight: 900;
     font-size: 1.8rem;
     margin: 4rem 0 2rem;
 }
 
-.section-divider::before,
+/* Remove the line on the left */
+.section-divider::before {
+    display: none; 
+}
+
+/* Keep the line on the right to fill the remaining space */
 .section-divider::after {
     content: '';
     flex: 1;
     border-bottom: 3px solid #111;
+    margin-left: 1.5rem;
 }
 
 .section-divider::before { margin-right: 1.5rem; }
