@@ -229,6 +229,8 @@ section.hero p {
 
 .citation-item p {
     margin: 0 0 1rem 0;
+    text-align: left; 
+    max-width: 80ch; /* WCAG AAA SC 1.4.8: Limits line length */
 }
 
 /* --- Portfolio Grid & Stacked Cards --- */
