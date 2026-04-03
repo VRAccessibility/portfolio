@@ -137,32 +137,35 @@ section.hero p {
     margin: 0;
 }
 
-/* --- Section Dividers --- */
+/* --- Section Dividers (Global: Centered) --- */
 .section-divider {
     display: flex;
     align-items: center;
-    text-align: left;
+    text-align: center;
     color: var(--brand-color);
     font-weight: 900;
     font-size: 1.8rem;
     margin: 4rem 0 2rem;
 }
 
-/* Remove the line on the left */
-.section-divider::before {
-    display: none; 
-}
-
-/* Keep the line on the right to fill the remaining space */
+.section-divider::before,
 .section-divider::after {
     content: '';
     flex: 1;
     border-bottom: 3px solid #111;
-    margin-left: 1.5rem;
 }
 
 .section-divider::before { margin-right: 1.5rem; }
 .section-divider::after { margin-left: 1.5rem; }
+
+/* --- Section Dividers (Override: Flush Left for Research Page) --- */
+.research-page .section-divider {
+    text-align: left;
+}
+
+.research-page .section-divider::before {
+    display: none; 
+}
 
 /* --- Objective & General Text --- */
 .objective-text {
