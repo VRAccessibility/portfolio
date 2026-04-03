@@ -33,12 +33,12 @@
         </div>
 
         <section class="project-hero-image" style="background-image: url('images/1745975239896.jpg');">
-            </section>
+        </section>
 
         <div style="text-align: center; margin-bottom: 4rem;">
             <button id="summary-toggle" aria-expanded="false" aria-controls="objective-summary" class="toggle-btn">Read Plain English Summary</button>
             <div id="objective-summary" hidden class="plain-english-box" style="text-align: left;">
-                <p>This project looked at 330 of the most popular (<abbr title="Virtual Reality">VR</abbr>) applications to see how easy they are for people with disabilities to use. I found that developers are generally including fewer options to customise the <abbr title="Virtual Reality">VR</abbr> experience. For example, important features like being able to play while sitting down, resizing text, or changing controller buttons are often missing or becoming less common over time. The goal of this research is to highlight these issues and provide clear recommendations so creators can build inclusive <abbr title="Virtual Reality">VR</abbr> applications that everyone can use.</p>
+                <p>This project looked at 330 of the most popular virtual reality (<abbr title="Virtual Reality">VR</abbr>) applications to see how easy they are for people with disabilities to use. I found that developers are generally including fewer options to customise the <abbr title="Virtual Reality">VR</abbr> experience. For example, important features like being able to play while sitting down, resizing text, or changing controller buttons are often missing or becoming less common over time. The goal of this research is to highlight these issues and provide clear recommendations so creators can build inclusive <abbr title="Virtual Reality">VR</abbr> applications that everyone can use.</p>
             </div>
         </div>
 
@@ -394,6 +394,19 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Plain English Summary Toggle
+        const toggleBtn = document.getElementById('summary-toggle');
+        const summaryBox = document.getElementById('objective-summary');
+
+        if(toggleBtn && summaryBox) {
+            toggleBtn.addEventListener('click', () => {
+                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', !isExpanded);
+                summaryBox.hidden = isExpanded;
+                toggleBtn.textContent = isExpanded ? 'Read Plain English Summary' : 'Hide Plain English Summary';
+            });
+        }
+
         // Respect reduced motion preference for videos
         const videos = document.querySelectorAll('.portfolio-card video, .project-figure video');
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
