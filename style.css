@@ -261,6 +261,10 @@ section.hero p {
     margin-bottom: 4rem;
 }
 
+.portfolio-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .portfolio-card {
     display: flex;
     flex-direction: column;
@@ -686,7 +690,8 @@ footer ul {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .portfolio-grid {
+    .portfolio-grid,
+    .portfolio-grid.three-columns {
         grid-template-columns: 1fr;
     }
     section.hero h1 {
@@ -737,6 +742,6 @@ footer ul {
 
 /* --- Modification: Indentation for All Lists --- */
 ul, ol {
-    padding-left: 2.8em; /* Shift all bullet and number lists further right than text edge */
-    margin-bottom: 1.5rem; /* Add vertical spacing back after global reset */
+    padding-left: 2.8em; 
+    margin-bottom: 1.5rem; 
 }
