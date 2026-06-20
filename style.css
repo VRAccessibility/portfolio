@@ -517,6 +517,7 @@ section.hero p {
 .full-width-image {
     width: 100%;
     margin: 4rem 0;
+    text-align: center;
 }
 
 .full-width-image img,
@@ -538,6 +539,12 @@ section.hero p {
     height: auto;
     display: block;
     border-radius: 4px; 
+}
+
+.full-width-image figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
 }
 
 @media (max-width: 768px) {
