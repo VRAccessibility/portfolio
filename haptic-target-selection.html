@@ -73,19 +73,19 @@
             <section class="meta-summary" aria-label="Project Summary">
                 <div>
                     <h3>Problem</h3>
-                    <p>The absence of accommodations and standardised non-visual guidelines has resulted in widespread <strong>exclusion from <abbr title="Virtual Reality">VR</abbr> for <abbr title="Blind and Low Vision">BLV</abbr> users</strong>. Prior <abbr title="Virtual Reality">VR</abbr> work has explored haptic feedback supplementing visuals or audio, yet its effectiveness as a <strong>standalone sensory substitution channel</strong> has not been thoroughly examined.</p>
+                    <p>The absence of accommodations and standardised non-visual guidelines has resulted in widespread <strong>exclusion from <abbr title="Virtual Reality">VR</abbr> for <abbr title="Blind and Low Vision">BLV</abbr> users</strong>. Prior <abbr title="Virtual Reality">VR</abbr> work has explored haptic feedback supplementing visuals or audio, yet its effectiveness as a <strong>standalone sensory substitution channel</strong> has not been thoroughly examined, leaving foundational interactions like spatial targeting underexplored.</p>
                 </div>
                 <div>
                     <h3>Key Findings</h3>                    
-                    <p>Results revealed: (1) An <strong>axis-dependent speed-accuracy trade-off</strong> where lateral selections were faster but less accurate on average than depth-based selections, though accuracy across both axes was heavily influenced by the biomechanical stability of arm movements, (2) a <strong>counter-intuitive error pattern</strong>, where participants were significantly less accurate for closer targets, and (3) qualitative feedback indicating <strong>high participant enthusiasm</strong> and potential psychological benefits.</p>
+                    <p>Results revealed: (1) An <strong>axis-dependent speed-accuracy trade-off</strong> where lateral selections were faster but less accurate than depth-based selections, heavily influenced by biomechanical stability, (2) a <strong>counter-intuitive error pattern</strong>, where closer targets yielded significantly more errors due to temporal hardware bottlenecks, and (3) qualitative feedback highlighting a mismatch between perceived and actual accuracy, alongside <strong>high participant enthusiasm</strong>.</p>
                 </div>
             </section>
 
             <div class="project-grid">
                 <div class="project-text">
-                    <h3>Problem Definition</h3>
-                    <p>Evaluating fundamental guidance tasks, such as pointing and selection, <strong>informs understanding of more complex high-level interactions</strong> like spatial orientation, wayfinding, and general navigation. Restricting the <abbr title="Virtual Reality">VR</abbr> environment to lateral and depth movements within a seated peripersonal space isolates the core selection skills required for consumer-level <abbr title="Virtual Reality">VR</abbr> interactions.</p>
-                    <p>This study explores mapping this space onto an off-the-shelf vibrotactile vest to guide precise hand movements for <strong>32 <abbr title="Blind and Low Vision">BLV</abbr> participants</strong>. The design deliberately <strong>decouples the vibrotactile feedback</strong>: the vest provides global awareness directions, while the handheld controller provides local guidance binary target collision signals, avoiding sensory overload at the hand.</p>
+                    <h3>Problem Definition & Setup</h3>
+                    <p>Evaluating fundamental guidance tasks, such as pointing and selection, <strong>informs understanding of more complex high-level interactions</strong> like spatial orientation and wayfinding. Restricting the <abbr title="Virtual Reality">VR</abbr> environment to lateral and depth movements within a seated peripersonal space isolates these core selection skills.</p>
+                    <p>This study maps this space onto an off-the-shelf vibrotactile vest to guide precise hand movements for <strong>32 <abbr title="Blind and Low Vision">BLV</abbr> participants</strong> (aged 24–84). The design deliberately <strong>decouples the vibrotactile feedback</strong>: the bHaptics TactSuit x40 vest provides global awareness directions, while the handheld Meta Quest Touch Pro Controller provides local guidance binary target collision signals, avoiding sensory overload at the hand.</p>
                 </div>
                 <figure class="project-figure">
                     <img src="images/hardwareuserstudy.png" alt="A participant wearing a VR headset and haptic vest, holding a single VR controller in their right hand.">
@@ -94,13 +94,13 @@
             </div>
 
             <div style="max-width: 80ch; margin: 4rem auto;">
-                <p style="text-align: left; margin-bottom: 1.5rem;">The literature demonstrates the utility of vibrotactile feedback for guiding <abbr title="Blind and Low Vision">BLV</abbr> users in <abbr title="Two-Dimensional">2D</abbr> interfaces and for augmenting sighted user performance in spatial target selection. However, a <strong>significant gap exists in translating these principles to fully non-visual <abbr title="Virtual Reality">VR</abbr> contexts</strong>, effectively excluding <abbr title="Blind and Low Vision">BLV</abbr> users from the spatial interactions that define modern <abbr title="Virtual Reality">VR</abbr>.</p>
-                <p style="text-align: left; margin-bottom: 1.5rem;">While vibrotactile cues often supplement visual information or provide alerts for obstacle avoidance in virtual environments, their use as the <strong>sole sensory substitution channel</strong> for <abbr title="Blind and Low Vision">BLV</abbr> users in <abbr title="Virtual Reality">VR</abbr> is a critical, <strong>unexplored area</strong>. Although prior work suggests unimodal cues may be preferred and <abbr title="Blind and Low Vision">BLV</abbr> participants have expressed a desire for more vibrotactile depth information, there is a <strong>lack of empirical data on how vibrotactile-only cues perform in <abbr title="Virtual Reality">VR</abbr> target selection scenarios</strong>.</p>
+                <p style="text-align: left; margin-bottom: 1.5rem;">The literature demonstrates the utility of vibrotactile feedback for guiding <abbr title="Blind and Low Vision">BLV</abbr> users in <abbr title="Two-Dimensional">2D</abbr> interfaces and for augmenting sighted user performance in spatial target selection. However, a <strong>significant gap exists in translating these principles to fully non-visual <abbr title="Virtual Reality">VR</abbr> contexts</strong>.</p>
+                <p style="text-align: left; margin-bottom: 1.5rem;">While vibrotactile cues often supplement visual information or provide alerts for obstacle avoidance in virtual environments, their use as the <strong>sole sensory substitution channel</strong> for <abbr title="Blind and Low Vision">BLV</abbr> users in <abbr title="Virtual Reality">VR</abbr> is a critical, <strong>unexplored area</strong>. This mixed-methods evaluation establishes a baseline for unimodal <abbr title="Virtual Reality">VR</abbr> target selection with standard vibrotactile cues.</p>
             </div>
 
             <div class="project-grid">
                 <figure class="project-figure">
-                    <img src="images/unity.png" alt="A Unity screenshot of the testing environement.">
+                    <img src="images/unity.png" alt="A Unity screenshot of the testing environment.">
                     <figcaption>A screenshot of Unity showing the study setup</figcaption>
                 </figure>
                 <div class="project-text">
@@ -110,100 +110,96 @@
                         <li style="margin-bottom: 0.5rem;">How does <strong>performance differ between lateral and depth axes</strong>?</li>
                         <li style="margin-bottom: 0.5rem;">How does <strong>vibrotactile modulation</strong> influence performance, preference, and <strong>usability</strong>?</li>
                     </ol>
-                    <p>The <strong>mixed methods</strong> approach, combining standardised performance data analysis and <strong>semi-structured interview thematic analysis</strong>, provides actionable recommendations for the design of accessible <abbr title="Virtual Reality">VR</abbr> interfaces for <abbr title="Blind and Low Vision">BLV</abbr> users.</p>
+                    <p>The <strong>mixed-methods</strong> approach, combining standardised performance data analysis (<abbr title="Movement Time">MT</abbr> and Error Rate) and <strong>semi-structured interview thematic analysis</strong>, provides actionable recommendations for the design of accessible <abbr title="Virtual Reality">VR</abbr> interfaces.</p>
                 </div>
             </div>
 
             <div class="project-grid">
                 <div class="project-text">
-                    <h3>Methodology</h3>
-                    <p>Participants used a single controller in their preferred hand for <strong>target selection with a trigger press</strong>, with selection errors permissible. The <strong>bHaptics TactSuit x40 vest</strong> provided global directional cues, while the Meta Quest Touch Pro Controller provided local binary vibration upon object contact. The task involved reciprocal selection between <abbr title="Three-Dimensional">3D</abbr> targets along either the lateral or depth axis.</p>
-                    <p>Testing occurred with <strong>32 unpaid participants</strong> (20 males, 12 females, 0 non-binary/other), aged 24-84 (M = 49.75 ± 16.12), recruited from across the <abbr title="United Kingdom">UK</abbr> to ensure evaluations could be conducted in locations and according to schedules suitable for the <abbr title="Blind and Low Vision">BLV</abbr> participants.</p>
+                    <h3>Methodology & Feedback Design</h3>
+                    <p>A <strong>2x2 within-subject repeated-measures</strong> design explored movement direction (<strong>Lateral vs. Depth</strong>) and haptic growth modulation on the vest. Distance was conveyed using a ‘hot/cold’ metaphor via two counterbalanced modalities:</p>
+                    <ul style="font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Continuous Quadratic Modulation:</strong> Continuous vibration where amplitude dynamically updated using a non-linear inverse quadratic function (an ‘ease-in’ effect clamping at 100% intensity at the target).</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Intermittent Pulse Modulation:</strong> A gated vibration at a fixed 100% amplitude where pulse frequency increased linearly (from 1 Hz to 5 Hz) as the user neared the target.</li>
+                    </ul>
+                    <p>Testing occurred with <strong>32 unpaid participants</strong> recruited from across the <abbr title="United Kingdom">UK</abbr> to ensure evaluations could be conducted in locations suitable for the <abbr title="Blind and Low Vision">BLV</abbr> participants.</p>
                 </div>
                 <figure class="project-figure">
                     <img src="images/Vest.png" alt="Diagram showing four different vest vibration patterns mapping to different angles">
-                    <figcaption>Vest vibration patterns</figcaption>
+                    <figcaption>Vest vibration patterns for spatial direction</figcaption>
                 </figure>
             </div>
 
             <figure class="full-width-image" style="margin: 6rem 0;">
                 <img src="images/Screenshot 2026-05-08 180859.png" alt="A dense table displaying demographic information for 32 participants including age, gender, visual impairment level, and technical experience">
-                <figcaption style="text-align: center;">Table with demographic information for the participants</figcaption>
+                <figcaption style="text-align: center;">Table with demographic information for the 32 BLV participants</figcaption>
             </figure>
 
             <div class="project-grid" style="align-items: start;">
                 <figure class="project-figure">
                     <img src="images/Top_down_targets (1).png" alt="Top down view diagram of the target layout showing targets at different distances along a cross formation">
-                    <figcaption>Target layout top down view</figcaption>
+                    <figcaption>Target layout top-down view (40cm to 70cm depth)</figcaption>
                 </figure>
                 <div class="project-text">
-                    <p style="margin-bottom: 1.5rem;">A <strong>2x2 within-subject repeated-measures</strong> design explored movement direction (<strong>lateral vs. depth</strong>) and haptic growth modulation (<strong>quadratic vs. pulse</strong>) with six commonly used indices of difficulty (<abbr title="Indices of Difficulty">IDs</abbr>). Participants alternated between targets appearing along the movement axis. Instructions followed standard task procedures, with continuous movement between targets as <strong>quickly and accurately</strong> as possible.</p>
+                    <p style="margin-bottom: 1.5rem;">The task involved reciprocal selection between <abbr title="Three-Dimensional">3D</abbr> targets along either the lateral or depth axis. Six commonly used indices of difficulty (<abbr title="Indices of Difficulty">IDs</abbr>) were explored, derived from a factorial combination of three target Euclidean Distances (10, 20, 30 cm) and two Widths (1.5, 3.5 cm).</p>
                     <p style="margin-bottom: 1rem;">In summary, the experimental design was as follows:</p>
                     <ul style="font-size: 0.95rem;">
                         <li style="margin-bottom: 0.5rem;">Total <strong>blocks per participant: 4</strong> (one for each direction × feedback method combination)</li>
                         <li style="margin-bottom: 0.5rem;">Total <strong>trials per block: 108</strong> (6 <abbr title="Indices of Difficulty">IDs</abbr> × 9 trials × 2 repetitions)</li>
-                        <li style="margin-bottom: 0.5rem;">Total <strong>trials per participant: 432</strong> (4 blocks × 108 trials)</li>
-                        <li style="margin-bottom: 0.5rem;">Total <strong>dataset: 13,824 trials</strong> (432 trials × 32 participants)</li>
+                        <li style="margin-bottom: 0.5rem;">Total <strong>trials per participant: 432</strong></li>
+                        <li style="margin-bottom: 0.5rem;">Total <strong>dataset: 13,824 trials</strong> across all participants</li>
                     </ul>
                 </div>
             </div>
 
             <div class="project-grid">
                 <div class="project-text">
-                    <h3>Results</h3>
-                    <p style="margin-bottom: 1rem;">Key significant results include:</p>
+                    <h3>Quantitative Results</h3>
+                    <p style="margin-bottom: 1rem;">Key significant results included a high overall Error Rate (mean <strong>63.19%</strong>), indicating that standard off-the-shelf vibrotactile cues are insufficient for precision without multimodal augmentation. Specifics include:</p>
                     <ul style="margin-bottom: 1.5rem; font-size: 0.95rem;">
-                        <li style="margin-bottom: 0.5rem;"><strong>Significant speed-accuracy trade-off:</strong> faster lateral movements but substantially more errors than depth</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>High overall error rates</strong> (mean 63.19%) indicating off-the-shelf vibrotactile cues are insufficient for precision</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Counter-intuitive distance effect:</strong> smaller and closer targets yielded more errors</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>No significant differences</strong> between continuous quadratic and intermittent pulse modulation</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Minimal learning effect</strong> as users rapidly hit a performance ceiling</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Subtle demographic patterns</strong> highlighting high individual variability</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Speed-accuracy trade-off:</strong> Lateral movements were significantly faster but substantially more error-prone (65.68% error) than Depth movements (60.69% error).</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Biomechanical stability:</strong> Positive depth targets (full arm extension) and inward lateral adduction movements were significantly more accurate than movements lacking physical bodily constraints.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>No significant differences</strong> between the continuous quadratic and intermittent pulse vest modulations.</li>
                     </ul>
-                    <p style="margin-bottom: 1.5rem;">Users <strong>systematically overshot targets</strong>, particularly for short distances, suggesting a hardware-perception bottleneck where mechanical latency impacted fine-motor precision.</p>
-                    <p>There was a strong <strong>mismatch between perceived accuracy and statistical results</strong>, with users believing they performed better laterally than in depth, whilst the results showed the opposite.</p>
+                    <p>Participants systematically <strong>overshot targets</strong>, particularly for short distances.</p>
                 </div>
                 <figure class="project-figure">
                     <img src="images/Bar_Graphs.png" alt="Several bar charts showing significant performance differences across movement time, error rate, and throughput">
-                    <figcaption>Significant performance differences</figcaption>
+                    <figcaption>Significant performance differences (Movement Time & Error Rate)</figcaption>
                 </figure>
+            </div>
+
+            <div style="max-width: 80ch; margin: 4rem auto;">
+                <p style="text-align: left;"><strong>Counter-intuitive Distance Effect:</strong> A significant interaction effect was found where <strong>smaller and closer targets yielded more errors</strong>. In standard Fitts' Law testing with sighted users, closer targets are typically easier. However, this inverse relationship suggests a hardware-perception bottleneck: during rapid, short-distance ballistic movements, participants traversed the target boundary before the <abbr title="Eccentric Rotating Mass">ERM</abbr> motors could reach peak intensity. This temporal mismatch heavily exacerbated overshooting, highlighting that standard motors lack the temporal resolution for fine-motor precision targeting.</p>
             </div>
 
             <div class="project-grid">
                 <figure class="project-figure">
                     <img src="images/boxplots.png" alt="Two boxplots showing endpoint distributions that indicate systematic overshooting past the target centers">
-                    <figcaption>Endpoint boxplots showing systematic overshooting</figcaption>
+                    <figcaption>Endpoint boxplots illustrating systematic overshooting</figcaption>
                 </figure>
                 <div class="project-text">
-                    <p style="margin-bottom: 1rem;">Qualitative summary:</p>
+                    <h3>Qualitative Findings</h3>
+                    <p style="margin-bottom: 1rem;">Semi-structured interviews revealed a complex user experience:</p>
                     <ul style="font-size: 0.95rem;">
-                        <li style="margin-bottom: 0.5rem;"><strong>Difficulty and Familiarity:</strong> Initial high cognitive load decreased with time, but physical fatigue was prominent for unusual depth movements</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Sense of Achievement and Fun:</strong> Participants framed the task as a game, frequently reporting enjoyment and strong motivation</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Refinement and Customisation:</strong> Strong desire for system control, multiple options, and multimodal feedback (such as audio cues)</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Psychological and Practical Benefits:</strong> High enthusiasm for the technology's potential in independent navigation, sports, and reducing social isolation</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Perception Mismatch:</strong> Participants felt highly confident in lateral motions despite performing significantly worse statistically—likely driven by biomechanical familiarity.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Emotional Fatigue:</strong> Physical fatigue was prominent for depth movements. For some, the repetitive back-and-forth motion evoked negative emotional responses associated with childhood suppression of self-stimulating "rocking" behaviours, highlighting a critical disability-aware design nuance.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Multimodal Desire:</strong> Strong consensus emerged on needing customisable feedback and adding audio cues to confirm target acquisition, whilst preserving hearing for screen readers.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Psychological Benefits:</strong> High enthusiasm for the technology's potential to simulate safe real-world navigation, accessible sports, and reduce social isolation.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="centered-section">
-                <h2>Conclusion</h2>
-                
-                <div style="text-align: left; max-width: 80ch; margin: 0 auto;">
-                    <h3 style="font-size: 1.8rem;">Key Takeaways:</h3>
-                    <ul style="font-size: 1.05rem; line-height: 1.8;">
-                        <li style="margin-bottom: 0.5rem;"><strong>Large Accuracy Challenges</strong> - standard vibrotactile-only interaction is exceptionally difficult</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Speed-Accuracy Trade-off Across Axes</strong> - faster but significantly less accurate lateral movements</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Neither Modulation Type Overcame Task Difficulty</strong> - both quadratic and pulse struggled with fine-grained precision</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Mismatch in Accuracy and Confidence</strong> - high confidence in lateral motion despite worse performance</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Inverse Distance-Accuracy Relationship</strong> - closer targets were significantly harder, indicating a hardware-perception bottleneck</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Minimal Learning Effect</strong> - users rapidly hit a performance ceiling</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Subtle Demographic Patterns</strong> - highlighted the necessity for personalised design tolerances</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Participant Enthusiasm</strong> - high psychological impacts, enjoyment, and practical use-case suggestions</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>Alternative Designs Needed</strong> - multi-stage feedback or force feedback is essential for the final approach</li>
-                    </ul>
-                </div>
+            <div class="centered-section" style="margin-top: 6rem;">
+                <h2 style="font-size: 3rem;">Reflections</h2>
             </div>
-            
+
+            <div class="reflections-text">
+                <p>Conducting this mixed-methods study with 32 <abbr title="Blind and Low Vision">BLV</abbr> participants was highly insightful. It exposed the stark contrast between what is theoretically assumed about vibrotactile guidance and the physical, temporal, and emotional realities of how users actually interact with the hardware.</p>
+                <p>The discovery that depth-based movements—while statistically more accurate—triggered negative childhood memories of suppressed self-stimulating behaviours for some participants was a profound reminder. It reinforced why <strong>disabled users must be directly included in the design process</strong> to catch nuanced emotional impacts that non-disabled researchers simply cannot anticipate.</p>
+                <p>Ultimately, the overwhelming request from participants for multimodal audio augmentation directly informed the next phase of my <abbr title="Doctor of Philosophy">PhD</abbr>. This study successfully justified moving beyond unimodal haptics to explore the complex interplay of visuo-audio and haptic cues in higher-level navigation tasks.</p>
+            </div>
+
             <div class="centered-section" style="border-top: 1px solid #eaeaea; padding-top: 6rem;">
                 <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Thank you for reading about my study!</h2>
                 <p style="margin-bottom: 4rem;">Feel free to contact me for any further questions.</p>
