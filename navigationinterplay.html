@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craig Anderton - VR Navigation \& Sensory Cues</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+    
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html" class="active">Portfolio</a></li>
+                <li><a href="published-research.html">Published Research</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1RpUV4su2DPiBxyuv3WWRQjVJ-2SgkJfq/view?usp=drive_link" target="_blank" rel="noopener">CV<span class="sr-only"> (opens in a new tab)</span></a></li>
+                <li><a href="https://craigandertonbcu.github.io/recruitment/" target="_blank" rel="noopener">Recruitment<span class="sr-only"> (opens in a new tab)</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <div class="project-header-text">
+            <h1>Locomotion and Sensory Cue Interplay in Non-Visual VR Navigation</h1>
+            <p>Evaluating continuous and discrete locomotion paired with uni- and multimodal feedback for <abbr title="Blind and Low Vision">BLV</abbr> users</p>
+        </div>
+
+        <section class="project-hero-image" style="background-image: url('images/layouts.png'); background-size: cover; background-position: center;">
+        </section>
+
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <button id="summary-toggle" aria-expanded="false" aria-controls="objective-summary" class="toggle-btn">Read Plain English Summary</button>
+            <div id="objective-summary" hidden class="plain-english-box" style="text-align: left;">
+                <p>Virtual reality (<abbr title="Virtual Reality">VR</abbr>) usually requires seeing where you are going, making it largely inaccessible to blind and low vision (<abbr title="Blind and Low Vision">BLV</abbr>) users. In this study, I tested how 18 <abbr title="Blind and Low Vision">BLV</abbr> participants navigated virtual obstacle courses using three common <abbr title="Virtual Reality">VR</abbr> movement styles (using a joystick, swinging arms, or teleporting) paired with different types of non-visual feedback (3D audio, a vibrating vest, or both). The results showed that success depends heavily on matching the right movement style with the right feedback. For example, continuous movements like walking with a joystick worked best with natural-sounding audio, while the sudden jumps of teleportation were easier to manage with vibration cues. Over time, participants used combinations of both sound and vibration as a fail-safe, allowing them to confidently move faster, even if they wandered slightly from the perfect path.</p>
+            </div>
+        </div>
+            
+            <section class="overview-grid" aria-labelledby="overview-heading">
+                <h2 id="overview-heading">Project Overview</h2>
+                <div class="overview-content">
+                    <p style="margin-bottom: 1.5rem;">A mixed-methods <abbr title="Virtual Reality">VR</abbr> navigation user study with 18 <abbr title="Blind and Low Vision">BLV</abbr> participants evaluating the effectiveness of the three most commercially ubiquitous non-fatiguing locomotion techniques paired with non-visual directional cues.</p>
+                    <ul>
+                        <li>3rd <abbr title="Association for Computing Machinery">ACM</abbr> Europe Summer School on Accessible and Inclusive Technologies: Doctoral Lightning Talk</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="meta-stats" aria-label="Project Metadata">
+                <div>
+                    <h3>2026</h3>
+                    <p>Year</p>
+                </div>
+                <div>
+                    <h3><abbr title="Birmingham City University">BCU</abbr> <abbr title="Doctor of Philosophy">PhD</abbr></h3>
+                    <p>Institution</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 2.2rem;">Empirical<br>(mixed-methods)</h3>
+                    <p>Type</p>
+                </div>
+            </section>
+
+            <section class="meta-summary" aria-label="Project Summary">
+                <div>
+                    <h3>Problem</h3>
+                    <p>Despite <abbr title="Virtual Reality">VR</abbr> adopting continuous and discrete artificial locomotion techniques, understanding of how these mechanics interact with non-visual auditory and vibrotactile guidance remains limited. <abbr title="Blind and Low Vision">BLV</abbr> users face a <strong>failure point barrier</strong> when attempting to access mainstream <abbr title="Virtual Reality">VR</abbr> experiences due to an over-reliance on visual paradigms and a lack of properly aligned non-visual navigation tools.</p>
+                </div>
+                <div>
+                    <h3>Key Findings</h3>                    
+                    <p>While participants achieved a high overall success rate (88.07%), efficient navigation heavily depends on the <strong>mechanical alignment</strong> between movement techniques and sensory feedback. A significant cognitive and mechanical clash emerged: continuous movement techniques benefited from auditory feedback, whereas the discrete jumps of teleportation relied on vibration-only feedback to prevent inefficient wandering.</p>
+                </div>
+            </section>
+
+            <div class="project-grid">
+                <div class="project-text">
+                    <h3>Problem Definition & Setup</h3>
+                    <p>This chapter builds upon foundational pointing tasks to evaluate fully independent non-visual wayfinding. The study employed a <strong>3x3 within-subjects factorial design</strong> with 18 <abbr title="Blind and Low Vision">BLV</abbr> participants, crossing three locomotion techniques (sliding joystick, arm-swinging, and teleportation) with three feedback modalities (audio-only, vibration-only, and combined).</p>
+                    <p>Testing utilised the Meta Quest Pro and the <strong>bHaptics Tactsuit x40 vest</strong>, focusing on commercially available off-the-shelf hardware rather than bespoke laboratory prototypes. The environment was rendered completely black to isolate the effects of the non-visual modalities.</p>
+                </div>
+                <figure class="project-figure">
+                    <img src="images/hardware outline.png" alt="An image of the system setup, with an office swivel chair, a Meta Quest Pro HMD (with bimanual Touch Pro controllers), and bHaptics x40 vest.">
+                    <figcaption>Hardware system setup</figcaption>
+                </figure>
+            </div>
+
+            <div style="max-width: 80ch; margin: 4rem auto;">
+                <p style="text-align: left; margin-bottom: 1.5rem;">To guide users non-visually, target proximity was conveyed using a looped spatialised piano sound or intensity-scaled vest vibration. For <strong>veering guidance</strong>, we implemented an attractive, off-course model with a 20-degree central deadzone. If the participant's tracking vector deviated beyond this threshold, spatialised audio (wind sounds) or vibrotactile feedback (on the back motors of the vest) was presented to "pull" them back to the correct heading.</p>
+            </div>
+
+            <div class="project-grid">
+                <figure class="project-figure">
+                    <img src="images/Feedback.png" alt="A semi-circle diagram illustrating the veering feedback zones with a central 20-degree no-feedback cone and scaling red feedback cones on either side.">
+                    <figcaption>The attractive veering guidance model</figcaption>
+                </figure>
+                <div class="project-text">
+                    <p style="margin-bottom: 1.5rem;">We asked:</p>
+                    <ol style="font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;">How do continuous and discrete locomotion techniques paired with uni- or multimodal non-visual feedback influence <strong>objective-based navigation performance</strong>?</li>
+                        <li style="margin-bottom: 0.5rem;">How do these combinations affect subjective <strong>workload, spatial presence, and overall user experience</strong>?</li>
+                    </ol>
+                    <p>Participants navigated through three distinct layouts consisting of straight paths, waypoints, and obstacles, requiring real-time course correction and spatial updating entirely without sight.</p>
+                </div>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-text">
+                    <h3>Quantitative Results</h3>
+                    <p style="margin-bottom: 1rem;">Performance metrics revealed critical insights into the interplay of movement and feedback:</p>
+                    <ul style="margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>High Success:</strong> 428 out of 486 targets were reached within the time limits (88.07% success rate), proving independent non-visual navigation is highly viable.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Efficiency Clash:</strong> Path Efficiency Ratio (<abbr title="Path Efficiency Ratio">PER</abbr>) suffered significantly when techniques and cues were misaligned. Joystick efficiency dropped severely with vibration-only feedback, while teleportation was highly inefficient when paired with audio-only feedback.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Speed-Accuracy Trade-off:</strong> Over time, participants navigated significantly faster but veered further from the path centerline, indicating they leveraged multimodal redundancy to move aggressively rather than cautiously.</li>
+                    </ul>
+                </div>
+                <figure class="project-figure">
+                    <img src="images/Interaction Log PER.png" alt="A clustered bar chart showing log-transformed path efficiency. Joystick efficiency is worst when paired with vibration-only feedback, while Teleportation efficiency is worst when paired with Audio-only feedback.">
+                    <figcaption>Interaction effect on Path Efficiency Ratio (<abbr title="Path Efficiency Ratio">PER</abbr>)</figcaption>
+                </figure>
+            </div>
+
+            <div class="project-grid">
+                <figure class="project-figure">
+                    <img src="images/speedAccuracy.png" alt="A dual-axis line graph showing movement time decreasing from Early to Late blocks, while veering increases and stays high.">
+                    <figcaption>The temporal speed-accuracy trade-off</figcaption>
+                </figure>
+                <div class="project-text">
+                    <h3>De-Coupling Time from Navigation Success</h3>
+                    <p style="margin-bottom: 1.5rem;">The non-significant overall Movement Time (<abbr title="Movement Time">MT</abbr>) results highlight that <abbr title="Blind and Low Vision">BLV</abbr> users can achieve consistent spatial velocities regardless of the locomotion technique provided. However, speed-based performance metrics can mask underlying usability barriers.</p>
+                    <p>Even though participants maintained their speed in the vibration-only condition, they reported a <strong>significantly higher perceived workload</strong> and poorer environmental understanding. Evaluating non-visual <abbr title="Virtual Reality">VR</abbr> accessibility requires looking beyond just how fast a user completes a route.</p>
+                </div>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-text">
+                    <h3>Qualitative Findings</h3>
+                    <p style="margin-bottom: 1rem;">Thematic analysis of the semi-structured interviews yielded four key narrative themes:</p>
+                    <ul style="font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Discrete Disconnection:</strong> The rhythmic mismatch of discrete teleportation severed the continuous sensory feedback loop, forcing a disruptive "stop-and-scan" bottleneck.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Vibration Translation Tax:</strong> Participants experienced high cognitive friction translating abstract vest vibrations into spatial movements, whereas audio cues felt ecologically grounded.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Thumbstick Friction:</strong> The 360-degree vector of the analogue joystick made maintaining a forward vector difficult for non-gamers, who often preferred the 1:1 somatic mapping of arm-swinging.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Strategy Changes Due to Redundancy:</strong> Participants actively adapted to accept a larger margin of error when provided with combined feedback, using it as a fail-safe to move with momentum.</li>
+                    </ul>
+                </div>
+                <figure class="project-figure">
+                    <img src="images/LikertBoxPlots.png" alt="Clustered boxplots showing the distribution of subjective user experience ratings across techniques and modalities.">
+                    <figcaption>Subjective User Experience Ratings</figcaption>
+                </figure>
+            </div>
+
+            <div class="centered-section">
+                <h2>Conclusion</h2>
+                
+                <div style="text-align: left; max-width: 80ch; margin: 0 auto;">
+                    <h3 style="font-size: 1.8rem;">Key Takeaways:</h3>
+                    <ul style="font-size: 1.05rem; line-height: 1.8;">
+                        <li style="margin-bottom: 0.5rem;"><strong>No One-Size-Fits-All:</strong> There is no singular optimal locomotion technique for non-visual accessibility. Developers must prioritise customisation over mandating a single method.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Mechanical Alignment is Crucial:</strong> Continuous movement techniques (sliding joystick) require ecologically grounded auditory channels to prevent spatial drift. Discrete locomotion (teleportation) benefits from proximity-based vibrations to balance discontinuous jumps.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Multimodality Empowers Users:</strong> Redundant sensory modalities act as a cognitive fail-safe. Allowing users to toggle overlapping non-visual channels ensures navigation strategies can scale with familiarity and application context.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Vibration Translation Tax:</strong> Vibration-only feedback induced the highest cognitive load and lowest ease-of-use ratings. It should be treated as a powerful supplementary channel rather than an isolated solution.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="centered-section" style="margin-top: 6rem;">
+                <h2 style="font-size: 3rem;">Reflections</h2>
+            </div>
+
+            <div class="reflections-text">
+                <p>This final empirical study successfully ties together the findings from my entire <abbr title="Doctor of Philosophy">PhD</abbr> journey. By observing the direct clash between locomotion mechanics and sensory modalities, it became incredibly clear that accessibility isn't just about adding a feature—it's about ensuring that feature harmonises with the core mechanics of the application.</p>
+                <p>Seeing participants evolve their strategies over the session—moving from cautious, straight-line walkers to confident, momentum-driven navigators—was incredibly rewarding. It reinforced my belief that <abbr title="Blind and Low Vision">BLV</abbr> users don't just want to "get by" in <abbr title="Virtual Reality">VR</abbr>; they want to explore, move fast, and experience the environment with agency.</p>
+                <p>The lessons learned here about multimodal redundancy and mechanical alignment will form the cornerstone of my final thesis recommendations, establishing a framework for how developers can create truly inclusive spatial computing experiences.</p>
+            </div>
+
+            <div class="centered-section" style="border-top: 1px solid #eaeaea; padding-top: 6rem;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Thank you for reading about my study!</h2>
+                <p style="margin-bottom: 4rem;">Feel free to contact me for any further questions.</p>
+                
+                <h3>Read more of my case studies</h3>
+                
+                <div class="portfolio-grid three-columns" style="margin-top: 2rem;">
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-meta">
+                            <h3><a href="haptic-target-selection.html">Haptic Targets</a></h3>
+                            <p>Movement characteristics in non-visual spatial <abbr title="Virtual Reality">VR</abbr></p>
+                        </div>
+                        <img src="images/x40_motor_placement.webp" alt="A bHaptics TactSuit x40 vest displaying multiple vibration motors">
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-meta">
+                            <h3><a href="commercial-vr.html"><abbr title="Virtual Reality">VR</abbr> Accessibility</a></h3>
+                            <p>Exploring the accessibility of <abbr title="Virtual Reality">VR</abbr> applications: presented at <abbr title="Conference on Human Factors in Computing Systems">CHI</abbr> '25</p>
+                        </div>
+                        <video loop muted playsinline controls aria-label="VR Application gameplay footage demonstrating accessibility tests">
+                            <source src="images/accessibilitygif.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <details class="video-transcript">
+                            <summary>Read Video Description</summary>
+                            <p>First-person perspective in a commercial virtual reality game, demonstrating visual evaluations of in-game accessibility features during movement.</p>
+                        </details>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-meta">
+                            <h3><a href="vr-locomotion.html"><abbr title="Virtual Reality">VR</abbr> Locomotion</a></h3>
+                            <p>Categorising locomotion in <abbr title="Virtual Reality">VR</abbr> applications: published in the <abbr title="International Journal of Human-Computer Interaction">IJHCI</abbr></p>
+                        </div>
+                        <video loop muted playsinline controls aria-label="Footage categorising swimming locomotion method in virtual reality">
+                            <source src="images/locomotion.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <details class="video-transcript">
+                            <summary>Read Video Description</summary>
+                            <p>A video of swimming in virtual reality, highlighting how the user must swing their arms in a breast stroke manner to swim in the virtual water.</p>
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+            <nav aria-label="Footer Navigation">
+                <ul>
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li><a href="published-research.html">Published Research</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1RpUV4su2DPiBxyuv3WWRQjVJ-2SgkJfq/view?usp=drive_link" target="_blank" rel="noopener">CV<span class="sr-only"> (opens in a new tab)</span></a></li>
+                    <li><a href="https://craigandertonbcu.github.io/recruitment/" target="_blank" rel="noopener">Recruitment<span class="sr-only"> (opens in a new tab)</span></a></li>
+                </ul>
+            </nav>
+            <p><a href="https://www.linkedin.com/in/craig-anderton-research" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></p>
+        </footer>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Plain English Summary Toggle
+        const toggleBtn = document.getElementById('summary-toggle');
+        const summaryBox = document.getElementById('objective-summary');
+
+        if(toggleBtn && summaryBox) {
+            toggleBtn.addEventListener('click', () => {
+                const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', !isExpanded);
+                summaryBox.hidden = isExpanded;
+                toggleBtn.textContent = isExpanded ? 'Read Plain English Summary' : 'Hide Plain English Summary';
+            });
+        }
+
+        // Respect reduced motion preference for videos
+        const videos = document.querySelectorAll('.portfolio-card video, .project-figure video');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        const handleVideoPlayback = () => {
+            videos.forEach(video => {
+                if (!prefersReducedMotion.matches) {
+                    // Play if the user has no preference against motion
+                    video.play().catch(e => console.log("Autoplay prevented by browser:", e));
+                } else {
+                    // Pause if the user prefers reduced motion
+                    video.pause();
+                }
+            });
+        };
+
+        handleVideoPlayback();
+        prefersReducedMotion.addEventListener('change', handleVideoPlayback);
+    });
+</script>
+
+</body>
+</html>
